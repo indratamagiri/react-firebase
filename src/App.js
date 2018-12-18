@@ -12,6 +12,7 @@ import ClientDetail from "./components/clients/ClientDetail";
 import EditClient from "./components/clients/EditClient";
 import Chart from "./components/clients/Chart";
 import Login from "./components/auth/Login";
+import Spinner from "./components/layout/Spinner";
 //import Setting from "./components/setting/Setting";
 
 import './App.css';
@@ -31,6 +32,7 @@ class App extends Component {
                 <Route exact path="/client/edit/:id" component={UserIsAuthenticated(EditClient)}/>
                 <Route exact path="/chart" component={UserIsAuthenticated(Chart)}/>
                 <Route exact path="/login" component={UserIsNotAuthenticated(Login)}/>
+                <Route exact path="/login/loading" component={UserIsNotAuthenticated(Spinner)}/>
               </Switch>
             </div>
           </div>
